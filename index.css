@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Outfit', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+
+  /* Light Mode - Standard White/Gray */
+  --background: 0 0% 100%;
+  --foreground: 240 10% 4%;
+
+  --card: 0 0% 98%;
+  --card-foreground: 240 10% 4%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 4%;
+
+  --primary: 265 89% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 240 10% 4%;
+
+  --muted: 240 5% 96%;
+  --muted-foreground: 240 4% 46%;
+
+  --accent: 45 93% 47%;
+  --accent-foreground: 240 10% 4%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 6% 90%;
+  --input: 240 6% 90%;
+  --ring: 265 89% 60%;
+
+  --radius: 1rem;
+}
+
+.dark {
+  /* Deep Black Backgrounds */
+  --background: 240 10% 4%;
+  --foreground: 0 0% 100%;
+
+  /* Glassmorphism Cards */
+  --card: 240 10% 8%;
+  --card-foreground: 0 0% 100%;
+  
+  --popover: 240 10% 8%;
+  --popover-foreground: 0 0% 100%;
+
+  /* Neon Primary (Blue/Violet) */
+  --primary: 265 89% 66%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary */
+  --secondary: 240 5% 15%;
+  --secondary-foreground: 0 0% 100%;
+
+  /* Muted */
+  --muted: 240 5% 15%;
+  --muted-foreground: 0 0% 100%;
+
+  /* VIP Gold Accent */
+  --accent: 45 93% 47%;
+  --accent-foreground: 240 10% 4%;
+
+  /* Destructive */
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* Borders */
+  --border: 240 5% 15%;
+  --input: 240 5% 15%;
+  --ring: 265 89% 66%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white;
+    font-family: var(--font-sans);
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card backdrop-blur-xl border border-border shadow-xl;
+  }
+  
+  .dark .glass-card {
+    @apply bg-card/80 border-white/10;
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+
+  .neon-border {
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+  }
+  
+  .gold-text {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

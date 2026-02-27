@@ -1,0 +1,233 @@
+Crée une application web mobile de pronostics sportifs nommée Kingbet, avec une interface futuriste, moderne et optimisée pour smartphone.
+
+1. Design et identité visuelle
+
+Application mobile first.
+
+Style futuriste et premium.
+
+Thème sombre (dark mode).
+
+Couleurs principales :
+
+Noir profond
+
+Bleu néon ou violet
+
+Accents dorés pour la section VIP
+
+Cartes de pronostics avec effet glassmorphism ou néon.
+
+Animations fluides.
+
+2. Structure principale de l’application
+
+L’application doit contenir :
+
+Page d’accueil
+
+Section pronostics gratuits
+
+Section pronostics VIP
+
+Historique par date
+
+Zone de messages publics
+
+Interface administrateur sécurisée
+
+3. Page d’accueil
+
+La page d’accueil doit afficher :
+
+Logo Kingbet
+
+Message ou annonce administrateur (zone éditable).
+
+Boutons principaux :
+
+Pronostics gratuits
+
+Pronostics VIP
+
+Derniers pronostics du jour.
+
+4. Section pronostics gratuits
+
+Affiche les pronostics gratuits du jour sous forme de cartes.
+
+Chaque carte contient :
+
+Match (Équipe A vs Équipe B)
+
+Heure
+
+Type de pari
+
+Cote
+
+Niveau de confiance
+
+Statut (Gagné / Perdu après résultat)
+
+Historique gratuit
+
+Calendrier ou liste de dates.
+
+L’utilisateur peut cliquer sur une date.
+
+Affichage des pronostics gratuits de ce jour.
+
+5. Section pronostics VIP
+
+Cette section affiche les pronostics VIP.
+
+Fonctionnement
+
+Les pronostics VIP sont affichés sous forme de cartes.
+
+Les détails du pronostic sont verrouillés.
+
+Une icône cadenas apparaît sur les cartes VIP verrouillées.
+
+Message VIP
+
+En haut de la section VIP :
+
+Débloquez tous les coupons VIP et augmentez vos gains.
+
+Paiement
+
+Texte : Accès VIP pour 1000 FCFA
+
+Bouton : Payer 1000 FCFA
+
+Bouton visible et mis en avant.
+
+Historique VIP
+
+Liste de dates disponibles.
+
+L’utilisateur peut sélectionner une date.
+
+Affichage des pronostics VIP de ce jour (deverrouillés).
+
+6. Zone de messages publics
+
+Créer une section visible sur l’accueil ou dans un onglet dédié.
+
+Fonctionnalités :
+
+L’administrateur peut :
+
+Écrire un message.
+
+Ajouter un lien cliquable.
+
+Les utilisateurs peuvent :
+
+Voir le message.
+
+Cliquer sur le lien.
+
+Partager le lien facilement (WhatsApp, Telegram, etc.).
+
+7. Interface administrateur (privée)
+Accès
+
+Interface invisible pour les utilisateurs.
+
+Accès protégé par un code PIN : 20077002.
+
+Fonctionnalités admin
+Gestion des pronostics
+
+Formulaire pour créer un pronostic avec :
+
+Match
+
+Heure
+
+Type de pari
+
+Cote
+
+Niveau de confiance
+
+Date du pronostic
+
+Type de pronostic
+
+Deux options :
+
+Gratuit
+
+VIP
+
+Logique :
+
+Si “Gratuit” → apparaît dans l’espace pronostics gratuits.
+
+Si “VIP” → apparaît dans l’espace VIP.
+
+Option de verrouillage
+
+Case à cocher : “Afficher cadenas VIP”.
+
+Si activée :
+
+Une icône cadenas apparaît sur la carte.
+
+Gestion des résultats
+
+Marquer un pronostic comme :
+
+Gagné
+
+Perdu
+
+Gestion des messages publics
+
+Champ texte pour message.
+
+Champ pour lien cliquable.
+
+Bouton publier.
+
+8. Fonctionnalités techniques
+
+Application web responsive.
+
+Base de données pour stocker :
+
+Pronostics
+
+Messages
+
+Historique
+
+Authentification admin par PIN.
+
+Système de filtrage par date.
+
+9. Technologies suggérées
+
+Frontend : React ou HTML/CSS/JS.
+
+Backend : Firebase, Supabase ou Node.js.
+
+Base de données : Cloud (Firestore, Supabase, etc.).
+
+Paiement : intégration mobile money (selon pays).
+
+10. Bonus (facultatif)
+
+Notifications push pour nouveaux pronostics.
+
+Installation comme application (PWA).
+
+Compteur de gains.
+
+Compte à rebours avant les matchs.
+
+Un point très important : les historiques des pronostics VIP sont accessibles et non verrouillés. En revanche, seuls les pronostics eux-mêmes sont protégés. Concrètement, les pronostics VIP sont verrouillés, mais les historiques des pronostics VIP restent consultables. Depuis mon espace administrateur, je crée le pronostic comme s'il s'agissait d'un pronostic gratuit. Cependant, lorsque je clique sur le bouton VIP, le coupon ou pronostic est automatiquement transféré dans l'espace VIP, où un cadenas masque automatiquement les détails spécifiques du pronostic. Une fois le match terminé, je peux retourner dans mon application et accéder à mon espace administrateur. Si le pronostic est correct, je sélectionne « Gagné ». Dans le cas contraire, je choisis « Perdu », et les statuts correspondants seront automatiquement affichés dans l’historique correspondants. Et j’ai également la possibilité de modifier ou de supprimer un pronostic selon mes besoins.Seul le code PIN "20077002" permet de déverrouiller l'interface administrateur. Les cartes des pronostics doivent être élégantes : l'équipe A doit apparaître à gauche de l'écran, l'équipe B à droite, avec "Vs" affiché au centre.Je souhaite également une fonctionnalité dans mon espace administrateur qui me permette de définir le type de pronostic que je souhaite créer, que ce soit pour le basketball, le football, le hockey ou tout autre sport, avant la publication. Ce type de pronostic devra être affiché en haut de la carte, juste en dessous des noms des équipes A et B. De plus, je voudrais avoir la possibilité d’ajouter des emojis, comme un ballon de basket ou de football ou autres, afin de rendre l’expérience plus intuitive et agréable pour les utilisateurs.
